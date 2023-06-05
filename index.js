@@ -7,11 +7,12 @@ const phonenumber = document.getElementById('phoneNumber')
 const email = document.getElementById('email')
 const title = document.getElementById('title')
 const url =  "https://randomuser.me/api/"
-const btn = document.getElementsByClassName('btn')
+const btn = document.getElementById('btn')
 title.textContent = 'RANDOM CARD GENERATOR'
 
-
- fetch(url).then(response => response.json())
+function randomPerson () { 
+   btn.addEventListener('click', randomPerson)
+   fetch(url).then(response => response.json())
  .then(data => {
     
     const cardImg = data.results[0].picture.large
@@ -29,3 +30,7 @@ title.textContent = 'RANDOM CARD GENERATOR'
     const cardAddress =  'Address -' + (' ') + data.results[0].location.street.number + (', ') + data.results[0].location.street.name
     address.textContent = cardAddress
  })
+
+}
+
+randomPerson()
