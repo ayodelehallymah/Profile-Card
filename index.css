@@ -42,6 +42,17 @@ p{
    transform: rotate(320deg);
    font-size: 3rem;
  }
+ #btn{
+    height: 3rem;
+    width: 10rem;
+    background-color: inherit;
+    color: inherit;
+    border-radius: 20%;
+    direction: center;
+ }
+ #btn:hover{
+    background-color:rgb(25, 25, 83) ;
+ }
 
 @media (max-width: 1276px) {
     body{
@@ -59,7 +70,6 @@ p{
 @media (max-width: 1276px) {
     body{
       width: fit-content;
-    
     }
 #myDiv{
     max-width: 30vh;
@@ -69,4 +79,5 @@ p{
     width: 50%;
 } 
 } 
+   
    
